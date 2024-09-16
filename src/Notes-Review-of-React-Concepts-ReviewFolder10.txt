@@ -1146,3 +1146,32 @@ REVIEW FOLDER 9 - React Testing
         › Press p to filter by a filename regex pattern.
         › Press t to filter by a test name regex pattern.
         › Press Enter to trigger a test run.
+
+REVIEW FOLDER10 - 
+   - We will use the following function component -https://www.robinwieruch.de/react-function-component/ (TODO - Very Good) called App component 
+     from a src/App.js file and test it in src/App.test.js
+    
+   - Defining a Test Suite   
+           describe('my function or component', () => {  <-- describe-block
+              it('does the following', () => {           <-  it-block or test-case
+
+              });
+            });
+    
+   - RTL's render function takes any JSX as argument to render it as output. Afterward, 
+     you should have access to the React component in your test. To convince yourself 
+     that it's there, you can use RTL's debug function:
+         describe('App', () => {
+          it('renders App component', () => {
+            render(<App />);
+
+            screen.debug();
+          });
+        });
+
+    - npm run test:watch (to run testing)
+
+
+REVIEW FOLDER11 - React Function Components (TODO - Very good)
+   - https://www.robinwieruch.de/react-function-component/
+

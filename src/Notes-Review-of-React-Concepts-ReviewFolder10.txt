@@ -1147,7 +1147,16 @@ REVIEW FOLDER 9 - React Testing
         › Press t to filter by a test name regex pattern.
         › Press Enter to trigger a test run.
 
-REVIEW FOLDER10 - 
+REVIEW FOLDER10 - React Testing with JEST + React Testing Library (RTL)
+   - go to https://www.robinwieruch.de/react-testing-library/ "React Testing Library: Rendering a Component" 
+   
+   - Summary of Steps in Setting Up React App to be tested using JEST + RTL 
+       - go to https://www.robinwieruch.de/react-testing-jest/ (How to test React with Jest)
+       - then setup the app (downloaded from github) 
+       - next Part 1: How to set up React with Webpack and Babel (https://www.robinwieruch.de/minimal-react-webpack-babel-setup/)
+
+
+
    - We will use the following function component -https://www.robinwieruch.de/react-function-component/ (TODO - Very Good) called App component 
      from a src/App.js file and test it in src/App.test.js
     

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 
-const title = 'My Minimal React Webpack Babel Setup';
+const title = 'The Minimal React App With Webpack Babel Setup To Test React with JEST + RTL';
 
 ReactDOM.render(
   <App title={title} />,

@@ -1148,7 +1148,6 @@ REVIEW FOLDER 9 - React Testing
         › Press Enter to trigger a test run.
 
 REVIEW FOLDER10 - React Testing with JEST + React Testing Library (RTL)
-   - go to https://www.robinwieruch.de/react-testing-library/ "React Testing Library: Rendering a Component" 
    
    - Review Summary of Steps in Setting Up React App to be tested using JEST + RTL 
        Step1: go to https://www.robinwieruch.de/react-testing-jest/ (How to test React with Jest)
@@ -1261,11 +1260,16 @@ REVIEW FOLDER10 - React Testing with JEST + React Testing Library (RTL)
                       If you would remove the module.hot.accept(); line in index.js, the browser would 
                       perform a reload if something has changed in the source code. 
 
+          
       Step4: Finally create your first component. In your src/index.js file define
+             install RTL 
+                 npm install --save-dev @testing-library/react --force 
+                 
              App.js component and import app.js 
 
              cd src/
                  touch App.js   
+
              then go to VS Code and add the following content to App.js
                  import React from 'react';
                  const App = ({ title }) =>
@@ -1301,31 +1305,31 @@ REVIEW FOLDER10 - React Testing with JEST + React Testing Library (RTL)
           Continue Reading: How to use Fonts in React - https://www.robinwieruch.de/webpack-font/
           Continue Reading: How to use Images in React - https://www.robinwieruch.de/webpack-images/
 
-
-
    - Now let us proceed test a React App using JEST +RTL:
-       We will use the following function component -https://www.robinwieruch.de/react-function-component/ (TODO - Very Good) called App component 
-       from a src/App.js file and test it in src/App.test.js
-     
-      - Defining a Test Suite   
-              describe('my function or component', () => {  <-- describe-block
-                  it('does the following', () => {           <-  it-block or test-case
+        Go to https://www.robinwieruch.de/react-testing-library/ "React Testing Library: Rendering a Component" 
 
+        We will use the following function component -https://www.robinwieruch.de/react-function-component/ (TODO - Very Good) called App component 
+        from a src/App.js file and test it in src/App.test.js
+      
+        - Defining a Test Suite   
+                describe('my function or component', () => {  <-- describe-block
+                    it('does the following', () => {           <-  it-block or test-case
+
+                    });
                   });
+          
+        - RTL's render function takes any JSX as argument to render it as output. Afterward, 
+          you should have access to the React component in your test. To convince yourself 
+          that it's there, you can use RTL's debug function:
+              describe('App', () => {
+                it('renders App component', () => {
+                  render(<App />);
+
+                  screen.debug();
                 });
-        
-      - RTL's render function takes any JSX as argument to render it as output. Afterward, 
-        you should have access to the React component in your test. To convince yourself 
-        that it's there, you can use RTL's debug function:
-            describe('App', () => {
-              it('renders App component', () => {
-                render(<App />);
-
-                screen.debug();
               });
-            });
 
-    - npm run test:watch (to run testing)
+      - npm run test -- --watch (to run testing)
 
 
 REVIEW FOLDER11 - React Function Components (TODO - Very good)

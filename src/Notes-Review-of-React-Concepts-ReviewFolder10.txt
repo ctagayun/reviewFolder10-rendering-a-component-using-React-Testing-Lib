@@ -1234,16 +1234,22 @@ REVIEW FOLDER10 - React Testing with JEST + React Testing Library (RTL)
 
                      do Start your application with npm start to see the output.
 
-                (C). Details of React with Hot Module Replacement tutorial: 
+                 (C). Details of React with Hot Module Replacement tutorial: 
                      A huge development boost will give you react-hot-loader (Hot Module Replacement). 
                      It will shorten your feedback loop during development. Basically whenever you 
                      change something in your source code, the change will apply in your app running 
                      in the browser without reloading the entire page.
                      
-                         First do: npm install --save-dev react-hot-loader 
-                         Install it from root folder C:\_AMyReactDev\reviewFolder9-how-to-test-react-components
+                     First install the below library (from the ROOT folder of the project)
+ 
+                            npm install --save-dev react-hot-loader 
 
                      Second: Add the configuration to your webpack.config.js file:
+                             add "const webpack = require('webpack');
+                             add into plugins section:
+                                plugins: [new webpack.HotModuleReplacementPlugin()],
+                             add into "devserver" section
+                                hot: true,
 
                      Third: modify src/index.js. You have to define that hot reloading is 
                           available and should be used:
@@ -1255,38 +1261,45 @@ REVIEW FOLDER10 - React Testing with JEST + React Testing Library (RTL)
                       If you would remove the module.hot.accept(); line in index.js, the browser would 
                       perform a reload if something has changed in the source code. 
 
-            (2) Finally create your first component. In your src/index.js file define
-              App.js component and import app.js 
+      Step4: Finally create your first component. In your src/index.js file define
+             App.js component and import app.js 
 
-                    cd src/
-                    touch App.js   
-                    then go to VS Code and add the code to App.js
-                       import React from 'react';
+             cd src/
+                 touch App.js   
+             then go to VS Code and add the following content to App.js
+                 import React from 'react';
+                 const App = ({ title }) =>
+                 <div>{title}</div>;
+                 export default App;
 
-                        const App = ({ title }) =>
-                          <div>{title}</div>;
+         SUMMARY: STEP1-STEP4 have shown you how to set up a basic web application 
+                  with Webpack 5.
+                  (1) Transpile 
+                      Webpack is only used to bundle all your JAVASCRIPT FILES
+                      to transpile new JavaScript features via Babel
+                  (2) Run the bundle
+                      Serve your bundle in development mode via Webpack's   Development Server. 
+                Basically that's everything that's needed to get started with 
+                creating your first web application.
 
-                        export default App;
+      Step5: Advance Setup - Exercises 
+          - go to Advance Webpack Setup   https://www.robinwieruch.de/webpack-advanced-setup-tutorial/
+          - 
 
+          - Put it into your minimal React with Webpack application
 
-            (3) Exercises (To Do)
-                 - go to Advance Webpack Setup 
-                      https://www.robinwieruch.de/webpack-advanced-setup-tutorial/
+          - Confirm your final result with the official advanced React with Webpack setup
+              https://github.com/rwieruch/advanced-react-webpack-babel-setup
 
-                 - Put it into your minimal React with Webpack application
+          This tutorial is part 1 of 3 in the series.
 
-                 - Confirm your final result with the official advanced React with Webpack setup
-                      https://github.com/rwieruch/advanced-react-webpack-babel-setup
-
-                  This tutorial is part 1 of 3 in the series.
-
-                  Part 2: How to use ESLint in Webpack - https://www.robinwieruch.de/webpack-eslint/
-                  Part 3: How to use ESLint in React - https://www.robinwieruch.de/react-eslint-webpack-babel/
-                  Continue Reading: How to use Prettier in VS Code -https://www.robinwieruch.de/how-to-use-prettier-vscode/
-                  Continue Reading: How to use CSS Modules in React - https://www.robinwieruch.de/react-css-modules/
-                  Continue Reading: How to use SVG Icons as React Components? - https://www.robinwieruch.de/react-svg-icon-components/
-                  Continue Reading: How to use Fonts in React - https://www.robinwieruch.de/webpack-font/
-                  Continue Reading: How to use Images in React - https://www.robinwieruch.de/webpack-images/
+          Part 2: How to use ESLint in Webpack - https://www.robinwieruch.de/webpack-eslint/
+          Part 3: How to use ESLint in React - https://www.robinwieruch.de/react-eslint-webpack-babel/
+          Continue Reading: How to use Prettier in VS Code -https://www.robinwieruch.de/how-to-use-prettier-vscode/
+          Continue Reading: How to use CSS Modules in React - https://www.robinwieruch.de/react-css-modules/
+          Continue Reading: How to use SVG Icons as React Components? - https://www.robinwieruch.de/react-svg-icon-components/
+          Continue Reading: How to use Fonts in React - https://www.robinwieruch.de/webpack-font/
+          Continue Reading: How to use Images in React - https://www.robinwieruch.de/webpack-images/
 
 
 

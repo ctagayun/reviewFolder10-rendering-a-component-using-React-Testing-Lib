@@ -10,4 +10,4 @@ ReactDOM.render(
   document.getElementById('app')
 );
 
-module.hot.accept();
+module.hot.accept(); //you have to define that hot reloading is available and should be used:

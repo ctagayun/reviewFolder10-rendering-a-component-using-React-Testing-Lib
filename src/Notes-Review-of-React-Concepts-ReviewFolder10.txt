@@ -1282,7 +1282,7 @@ REVIEW FOLDER10 - React Testing with JEST + React Testing Library (RTL)
                 Basically that's everything that's needed to get started with 
                 creating your first web application.
 
-      Step5: Advance Setup - Exercises 
+      Step5: Advance Setup - Exercises  (TODO LATER)
           - go to Advance Webpack Setup   https://www.robinwieruch.de/webpack-advanced-setup-tutorial/
           - 
 
@@ -1303,26 +1303,27 @@ REVIEW FOLDER10 - React Testing with JEST + React Testing Library (RTL)
 
 
 
-   - We will use the following function component -https://www.robinwieruch.de/react-function-component/ (TODO - Very Good) called App component 
-     from a src/App.js file and test it in src/App.test.js
-    
-   - Defining a Test Suite   
-           describe('my function or component', () => {  <-- describe-block
-              it('does the following', () => {           <-  it-block or test-case
+   - Now let us proceed test a React App using JEST +RTL:
+       We will use the following function component -https://www.robinwieruch.de/react-function-component/ (TODO - Very Good) called App component 
+       from a src/App.js file and test it in src/App.test.js
+     
+      - Defining a Test Suite   
+              describe('my function or component', () => {  <-- describe-block
+                  it('does the following', () => {           <-  it-block or test-case
 
+                  });
+                });
+        
+      - RTL's render function takes any JSX as argument to render it as output. Afterward, 
+        you should have access to the React component in your test. To convince yourself 
+        that it's there, you can use RTL's debug function:
+            describe('App', () => {
+              it('renders App component', () => {
+                render(<App />);
+
+                screen.debug();
               });
             });
-    
-   - RTL's render function takes any JSX as argument to render it as output. Afterward, 
-     you should have access to the React component in your test. To convince yourself 
-     that it's there, you can use RTL's debug function:
-         describe('App', () => {
-          it('renders App component', () => {
-            render(<App />);
-
-            screen.debug();
-          });
-        });
 
     - npm run test:watch (to run testing)
 
